@@ -1,3 +1,5 @@
+# Converts sequence alignments to format compatible with bppml
+
 from Bio import AlignIO
 import os
 import argparse
