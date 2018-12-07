@@ -1,4 +1,4 @@
-# Converts sequence alignments to format compatible with bppml
+# Converts sequence alignments to format compatible with bppml, as some phylip formats fail
 
 from Bio import AlignIO
 import os
