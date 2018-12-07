@@ -1,8 +1,3 @@
-#Example data set adapted from PAML
-#
-#logL0 = -1084.23740828789
-#logL  = -1056.00142355909
-
 # Global variables:
 
 MODEL = M0
