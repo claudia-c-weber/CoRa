@@ -3,7 +3,7 @@ import glob
 import os
 import pandas as pd
 #Filter codons for species that use nuclear code 12
-#Provided in CTG_clade_list.txt from supplemetary materials
+#Provided in CTG_clade_list.txt from supplementary materials of Shen et al. (2016)
 alt_table = pd.read_table("CTG_clade_list.txt")
 alternative = [s for s in alt_table.Species]
 
