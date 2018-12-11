@@ -46,6 +46,7 @@ for i in ./cleaned_fasta/*.fst; do
 done
 
 #Run ModelOMatic (not recommended for untested datasets)
+#Input must be phylip; uses bionj starting tree
 mkdir -p ./output_mm/
 for i in ./phy/*.phy; do
   f=$(basename $i .phy)
