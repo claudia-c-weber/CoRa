@@ -1,5 +1,6 @@
 # Assumes LSF environment with Anaconda (w. Python 3.6, BioPython),
 # Bio++ v. 2.4.0, and ModelOMatic v. 1.04 (development branch) installed.
+# Folder must contain Radical.mat
 
 bpp_basedir=~/workspace/software/bpp/dev/bin/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/workspace/software/bpp/dev/lib64/
