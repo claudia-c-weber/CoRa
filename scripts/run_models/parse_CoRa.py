@@ -50,7 +50,7 @@ def parse_bppml_out(indir, outfile):
             Omega_Ra = re.search(",omegaR=([0-9.]+),", output_CoRa).group(1)
             length = re.search("# Number of sites = ([0-9]+)\n", output_M0).group(1)
             LR = 2 * (abs(float(L_M0)) - abs(float(L_CoRa)))
-            of.write("\t".join([str(t) for t in [r, i, L_M0, L_CoRa, LR, Omega_M0, Omega_Co, Omega_Ra, length, int(LR > 3.841), int(Omega_Co > Omega_Ra)]]) + "\n")
+            of.write("\t".join([str(t) for t in [r, i, L_M0, L_CoRa, LR, Omega_M0, Omega_Co, Omega_Ra, float(length)*3, int(LR > 3.841), int(Omega_Co > Omega_Ra)]]) + "\n") #convert columns to nucs
         except AttributeError:
             of.write("{}\t{}\t{}\n".format(r, i, "\t".join(["NA"]*9)))
             print ("NA")
