@@ -2,6 +2,11 @@
 # Bio++ v. 2.4.0, and ModelOMatic v. 1.04 (development branch) installed.
 # Folder must contain Radical.mat
 
+# Notes on defining amino acid partitions in bppml: 
+# https://github.com/BioPP/bpp-phyl/blob/master/src/Bpp/Phyl/Model/Codon/AbstractCodonClusterAASubstitutionModel.h
+# Amino acids are in alphabetical order (ARNDCQEGHILKMFPSTWYV)
+# The default partition (i.e. "partition" parameter not explicitly set) corresponds to the one used in this study.
+
 bpp_basedir=~/workspace/software/bpp/dev/bin/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/workspace/software/bpp/dev/lib64/
 
