@@ -8,6 +8,8 @@
 # The default partition (i.e. "partition" parameter not explicitly set) corresponds to the one used in this study.
 
 bpp_basedir=~/workspace/software/bpp/dev/bin/
+modelomatic_path=~/workspace/software/modelomatic/modelomatic/modelomatic
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/workspace/software/bpp/dev/lib64/
 
 #Clean phylip files and convert to fasta to ensure compatibility with bppml
@@ -57,7 +59,7 @@ mkdir -p ./output_mm/
 for i in ./phy/*.phy; do
   f=$(basename $i .phy)
   if [ ! -f ./output_mm/${f}.output ]; then
-    bsub -o stdout_mm.txt -e stderr_mm.txt -J "emp_MM" "~/workspace/software/modelomatic/modelomatic/modelomatic ./phy/${f}.phy > ./output_mm/${f}.output";
+    bsub -o stdout_mm.txt -e stderr_mm.txt -J "emp_MM" "${modelomatic_path} ./phy/${f}.phy > ./output_mm/${f}.output";
   fi
 done
 
