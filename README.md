@@ -2,7 +2,7 @@
 
 Notes on replicating results from Weber and Whelan, 2019 (https://doi.org/10.1093/molbev/msz003) using BppSuite (https://github.com/BioPP/bppsuite; Gu&#233;guen et al., 2013).
 
-The folder ./scripts/run_models/ contains configuration information and scripts.
+The folder ./scripts/run_models/ contains configuration information and scripts (note that the configuration files were tested with Bio++ v 2.4.0).
 
 ## Comparison of results
 
