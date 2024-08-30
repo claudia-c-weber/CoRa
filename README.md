@@ -1,8 +1,17 @@
 # CoRa - a parametric codon model for estimating conservative or radical amino acid substitutions
 
-Notes on replicating results from Weber and Whelan, 2019 (https://doi.org/10.1093/molbev/msz003) using BppSuite (https://github.com/BioPP/bppsuite; Gu&#233;guen et al., 2013).
+This repository contains notes on replicating results from Weber and Whelan, 2019 (https://doi.org/10.1093/molbev/msz003) using BppSuite (https://github.com/BioPP/bppsuite; Gu&#233;guen et al., 2013).
 
-The folder ./scripts/run_models/ contains configuration information and scripts (note that the configuration files were tested with Bio++ v 2.4.0).
+The folder ./scripts/run_models/ contains configuration information and scripts.
+
+## Model basics
+
+The CoRa model is specified by setting the `model` parameter to `CodonAAClustFreq(model=K80(),frequencies=F3X4)`. Other equilibrium frequency settings may also be used.
+
+Custom amino acid partitions can also be specified. By default `partition=(1,2,3,3,3,2,2,1,2,4,4,2,4,4,1,3,3,2,2,1)`will be used. The order of the amino acids in the list is `ARNDCQEGHILKMFPSTWYV`, and the partitions indicate small non-polar, large polar, small polar, and large non-polar amino acids. 
+
+## Prerequisites and configuration
+The configuration files provided in this repository were tested with Bio++ v 2.4.0, and you will need to check out [this commit](https://github.com/BioPP/bpp-phyl/commit/64b6abc67d815ca062a90ed4390d457c83dc534b) of bpp-phyl in order to use the model. The structure of the configuration file has changed in more recent versions. See [here](https://github.com/BioPP/bppsuite/blob/master/Examples/MaximumLikelihood/Codons/M0/ML.bpp) for an example of how to set up M0 if you wish to use a newer version of Bio++. However, please be aware that I have not formally benchmarked this setup. 
 
 ## Comparison of results
 
